@@ -29,5 +29,5 @@ function insertTextAtCursor(el, text) {
 
 function lookup() {
     var inp = prompt("Enter emoji");
-    alert("Code point is: " + inp.charCodeAt(0));
+    alert("Code point is: " + inp.codePointAt(0));
 }
