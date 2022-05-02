@@ -1,12 +1,12 @@
 function run() {
     var emojis = Array.from(input.value);
-    var reemoji = emojis.join(String.fromCodePoint(0x200D))
+    var reemoji = emojis.join(String.fromCodePoint(0x200D));
     output.innerText = reemoji;
 }
 
 function insert() {
     var cp = parseInt(prompt("U+..."), 16);
-    insertTextAtCursor(input, String.fromCodePoint(cp))
+    insertTextAtCursor(input, String.fromCodePoint(cp));
     run();
 }
 
@@ -25,4 +25,9 @@ function insertTextAtCursor(el, text) {
         range.text = text;
         range.select();
     }
+}
+
+function lookup() {
+    var inp = prompt("Enter emoji");
+    alert("Code point is: " + inp.charCodeAt(0));
 }
